@@ -43,13 +43,13 @@ export default function Home() {
 
       <Navbar/>
       
-      <section id="home" className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-4 mb-4">
-        <div className="h-[30rem] rounded-3xl p-10 flex flex-col justify-between animated-gradient bg-cover">
-          <h1 className="text-4xl font-semibold mb-10">Rayaan Khan | Software Engineer</h1>
+      <section id="home" className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-6 mb-8 mt-4">
+        <div className="h-[32rem] rounded-3xl p-12 flex flex-col justify-between animated-gradient bg-cover border-l-4 border-[#3D3A38]">
+          <h1 className="text-5xl font-bold mb-4">Rayaan Khan <span className="block mt-2 text-4xl text-gray-700">Software Engineer</span></h1>
           <div className="mt-auto">
-            <div className="flex flex-col lg:flex-row items-center gap-4 justify-self-end mb-4">
-              <button className="bg-black text-white font-medium py-3 px-12 rounded-full w-60 lg:w-auto">Contact me</button>
-              <div className="flex items-center gap-4">
+            <div className="flex flex-col lg:flex-row items-center gap-6 justify-self-end mb-4">
+              <button className="bg-[#FF8B3D] text-white font-semibold py-3 px-12 rounded-full w-60 lg:w-auto hover:bg-[#FF5A5F] transition-all duration-300 shadow-lg hover:shadow-xl">Contact me</button>
+              <div className="flex items-center gap-6">
                 <SocialButton bgColor="github" link="https://github.com/rayaan-khan428">
                   <Github className="w-6 h-6" />
                 </SocialButton>
@@ -63,7 +63,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="h-[30rem] rounded-3xl p-8 bg-[url('/profile.jpg')] bg-cover bg-center"/>
+        <div className="h-[32rem] rounded-3xl p-8 bg-[url('/profile.jpg')] bg-cover bg-center shadow-xl hover:shadow-2xl transition-all duration-300 border-l-4 border-[#3D3A38] relative overflow-hidden">
+
+        </div>
       </section>
 
 
@@ -74,7 +76,22 @@ export default function Home() {
         <AboutMe />
       </section>
 
-      <section id='experience' className="grid grid-cols-1 lg:grid-cols-1 gap-4 my-4 mb-8">
+      <section id='experience' className="grid grid-cols-1 lg:grid-cols-1 gap-6 my-8 mb-12">
+        <h2 className="text-4xl font-bold text-[#004777] mb-6">Work Experience</h2>
+        
+        <Experience
+        companyName="Scotiabank"
+        role="Software Engineer Intern"
+        experiencePoints={[
+          "Developed and maintained scalable financial applications using modern JavaScript frameworks and microservices architecture.",
+          "Collaborated with cross-functional teams to implement new features and optimize user experience for banking applications.",
+          "Participated in agile development processes, contributing to sprint planning, daily standups, and retrospectives."
+        ]}
+        dark={false}
+        link="https://www.scotiabank.com/"
+        logoSrc="https://logos-world.net/wp-content/uploads/2021/03/Scotiabank-Logo.png"
+        />
+        
         <Experience
         companyName="Thales"
         role="Software Engineer Intern"
@@ -102,7 +119,8 @@ export default function Home() {
         />
       </section>
 
-      <section id="projects" className="grid grid-cols-1 lg:grid-cols-2 gap-4 my-4">
+      <section id="projects" className="grid grid-cols-1 lg:grid-cols-2 gap-6 my-8">
+        <h2 className="text-4xl font-bold text-[#004777] mb-6 col-span-full">Projects</h2>
 
           <ProjectPreview
           name="Leetr"
@@ -142,7 +160,8 @@ export default function Home() {
       </section>
 
       {/* Skills */}
-      <section id="skills" className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+      <section id="skills" className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 mt-12">
+        <h2 className="text-4xl font-bold text-[#004777] mb-6 col-span-full">Skills & Interests</h2>
         <SkillCard
           title="Tech Stack"
           items={[
@@ -166,21 +185,22 @@ export default function Home() {
         />
       </section>
       
-      <section id="photos" className="mb-8">
-      <PhotoGallery/>
+      <section id="photos" className="mb-12 mt-12">
+        <h2 className="text-4xl font-bold text-[#004777] mb-6">Photography</h2>
+        <PhotoGallery/>
       </section>
       
 
       {/* footer section */}
-      <section id="contact" className="grid grid-cols-1 mb-8">
-        <div className="h=[30rem] rounded-3xl p-10 flex flex-col gap-16 animated-gradient bg-cover">
-          <h1 className="text-4xl font-semibold">Want to work together?</h1>
-          <p className="flex-1">Feel free to reach out to collaborate on something or just say hello! <br></br> rayaan.k.ca@gmail.com
+      <section id="contact" className="grid grid-cols-1 mb-12">
+        <div className="min-h-[30rem] rounded-3xl p-12 flex flex-col gap-12 animated-gradient bg-cover border-l-4 border-[#3D3A38] shadow-xl">
+          <h1 className="text-5xl font-bold">Want to work together?</h1>
+          <p className="flex-1 text-lg">Feel free to reach out to collaborate on something or just say hello! <br/><span className="font-semibold mt-4 block">rayaan.k.ca@gmail.com</span>
           </p>
 
-          <div className="flex flex-col lg:flex-row items-center gap-4 justify-self-end">
-            <button className="bg-black text-white font-medium py-3 px-12 rounded-full w-60 lg:w-auto">Contact me</button>
-            <div className="flex items-center gap-4">
+          <div className="flex flex-col lg:flex-row items-center gap-6 justify-self-end">
+            <button className="bg-[#FF8B3D] text-white font-semibold py-3 px-12 rounded-full w-60 lg:w-auto hover:bg-[#FF5A5F] transition-all duration-300 shadow-lg hover:shadow-xl">Contact me</button>
+            <div className="flex items-center gap-6">
               
               <SocialButton bgColor="github" link="https://github.com/Rayaan-khan428">
                 <Github className="w-6 h-6"/>

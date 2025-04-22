@@ -5,26 +5,33 @@
 /* Primary body styling */
 body {
   /* Maximum width set to 68rem, width set to 95% of the viewport width, centered */
-  @apply max-w-[68rem] w-[95vw] mx-auto;
+  @apply max-w-[72rem] w-[95vw] mx-auto font-sans;
 
-  /* Background color set to a dark gray tone */
-  background: #4D4846;
+  /* Light summer sky blue gradient background with a subtle pattern */
+  background: linear-gradient(135deg, #7FCEF1 0%, #89D6FB 100%);
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.05) 1%, transparent 1%),
+    radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.05) 1%, transparent 1%);
+  background-size: 60px 60px;
 }
 
 /* Animated gradient background for sections */
 .animated-gradient {
-  /* Gradient colors and size */
-  background: linear-gradient(270deg, #E1E2E2, #9c9e9e);
+  /* Summer-themed gradient colors */
+  background: linear-gradient(270deg, rgba(255, 245, 225, 0.75), rgba(255, 230, 200, 0.75));
   background-size: 400% 400%;
 
   /* Infinite animation applying the gradient */
   animation: gradientAnimation 7s ease infinite;
+  box-shadow: 0 8px 32px rgba(0, 71, 119, 0.12);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /* Animated gradient text effect */
 .animated-gradient-text {
-  /* Gradient colors and size for text */
-  background: linear-gradient(270deg, #323232, #5C5C5C);
+  /* Summer-themed gradient colors for text */
+  background: linear-gradient(270deg, #FF8B3D, #FF5A5F);
   background-size: 400% 400%;
 
   /* Animation and text clipping */
@@ -38,7 +45,7 @@ body {
 @supports not (-webkit-background-clip: text) {
   .animated-gradient-text {
     /* Solid color used when gradient text isn't supported */
-    color: #F8D926;
+    color: #FF8B3D;
   }
 }
 

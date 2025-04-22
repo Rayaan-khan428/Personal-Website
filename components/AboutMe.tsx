@@ -4,7 +4,7 @@ import React from 'react';
 
 const AboutMe: React.FC = () => {
   return (
-    <div className="bg-[#E1E2E2] rounded-3xl shadow-xl overflow-hidden text-black p-6 md:p-10">
+    <div className="bg-[rgba(255,245,225,0.7)] rounded-3xl shadow-xl overflow-hidden text-[#004777] p-6 md:p-10 backdrop-blur-lg border border-[rgba(255,255,255,0.3)]">
       <h2 className="text-3xl font-semibold mb-4 animated-gradient-text">About Me</h2>
       <p className="mb-4">
         I'm a third year CS student at Wilfrid Laurier University studying Computer Science  

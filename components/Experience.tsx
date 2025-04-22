@@ -32,18 +32,18 @@ const ExperiencePreview: React.FC<Props> = ({
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className={`flex flex-col md:flex-row items-center justify-between rounded-3xl overflow-hidden shadow-xl ${dark ? 'dark' : ''}`}
-        style={{ backgroundColor: '#E1E2E2' }}
+        className={`flex flex-col md:flex-row items-center justify-between rounded-3xl overflow-hidden shadow-xl ${dark ? 'dark' : ''} hover:shadow-2xl transition-all duration-300`}
+        style={{ backgroundColor: 'rgba(255, 245, 225, 0.7)', borderLeft: '4px solid #FF8B3D', backdropFilter: 'blur(10px)', border: '1px solid rgba(255, 255, 255, 0.3)' }}
         {...previewAnimation}
         whileHover={{ scale: 1.02 }}
         transition={{ duration: 0.3, ease: 'easeOut' }}
     >
         <div className='w-full md:w-4/5 p-6 md:p-10'>
-            <h2 className='text-3xl font-semibold'>{companyName}</h2>
-            <h3 className='text-2xl font-semibold mb-4'>{role}</h3>
+            <h2 className='text-3xl font-semibold text-[#004777]'>{companyName}</h2>
+            <h3 className='text-2xl font-semibold mb-4 text-[#FF5A5F]'>{role}</h3>
             <ul className='space-y-4'>
                 {experiencePoints.map((point, index) => (
-                    <li key={index} className={`border-b ${index !== experiencePoints.length - 1 ? 'border-gray-300' : 'border-transparent'} pb-2`}>
+                    <li key={index} className={`border-b ${index !== experiencePoints.length - 1 ? 'border-[#FF8B3D]/20' : 'border-transparent'} pb-2 text-[#004777]`}>
                         {point}
                     </li>
                 ))}

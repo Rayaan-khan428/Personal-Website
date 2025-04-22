@@ -43,10 +43,10 @@ const ProjectPreview: React.FC<Props> = ({
 }) => {
     return ( 
         <motion.div
-            className={`h-[30rem] rounded-3xl overflow-hidden ${dark ? "dark" : ""}`}
-            style={{ backgroundColor: bgColor }}
+            className={`h-[30rem] rounded-3xl overflow-hidden ${dark ? "dark" : ""} shadow-xl border border-[rgba(255,255,255,0.1)]`}
+            style={{ backgroundColor: `${bgColor}cc`, backdropFilter: 'blur(10px)' }}
             {...previewAnimation}
-            whileHover={{ scale: 1.02 }}
+            whileHover={{ scale: 1.02, boxShadow: '0 20px 40px rgba(0, 0, 0, 0.2)' }}
             transition={{ duration: 0.3, ease: "easeOut" }}
         >
             <div 
@@ -59,8 +59,9 @@ const ProjectPreview: React.FC<Props> = ({
                         <p className='text-sm text-zinc-500 dark:text-zinc-300'>{description}</p>
                     </div>
                     <motion.div 
-                        className='h-12 w-12 bg-white rounded-full flex justify-center items-center cursor-pointer'
+                        className='h-12 w-12 bg-white/80 backdrop-blur-md rounded-full flex justify-center items-center cursor-pointer shadow-lg border border-white/30'
                         whileTap={{ scale: 0.8, transition: { duration: 0.2 } }}
+                        whileHover={{ backgroundColor: 'rgba(255, 255, 255, 0.9)', scale: 1.05 }}
                         onClick={() => link && window.open(link, "_blank")}
                     >
                         <Arrow className="w-6 h-6"/>
